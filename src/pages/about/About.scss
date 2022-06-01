@@ -1,0 +1,13 @@
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 64px;
+  padding: 30px;
+  gap: 30px;
+
+  .about-wrapper__gif {
+    max-width: 100%;
+  }
+}

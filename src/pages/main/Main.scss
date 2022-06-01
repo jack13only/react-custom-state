@@ -1,0 +1,19 @@
+.main-wrapper {
+  background-color: rgb(245, 245, 245);
+  border: solid 10px rgb(255, 255, 255);
+  border-radius: 20px;
+  padding: 15px 150px;
+
+  @media (max-width: 850px) {
+    padding: 15px 50px;
+  }
+
+  .main-wrapper__error-load,
+  .main-wrapper__loading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+  }
+}

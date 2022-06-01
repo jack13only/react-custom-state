@@ -1,0 +1,36 @@
+.pagination {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  width: 20vw;
+  margin: 30px auto 0;
+  font-size: 32px;
+  align-items: center;
+  justify-items: center;
+
+  .page-left,
+  .page-right {
+    color: rgb(218, 255, 148);
+    font-weight: 900;
+    cursor: pointer;
+    text-shadow: 0px 0px 5px rgb(0, 0, 0);
+    font-size: 42px;
+  }
+
+  .page-left {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .page-right {
+    grid-area: 1 / 3 / 2 / 4;
+  }
+  .page {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+
+  @media (max-width: 1250px) {
+    width: 30vw;
+  }
+
+  @media (max-width: 850px) {
+    width: 50vw;
+  }
+}

@@ -1,0 +1,54 @@
+.cardLink {
+  outline: none;
+  text-decoration: none;    
+  color: black;
+  .card {
+    padding: 20px;
+    border: 1px rgb(0, 0, 0) solid;
+    border-radius: 5px;
+    transition: 0.5s linear;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+
+    &:hover {
+      background-color: rgb(246, 255, 245);
+    }
+
+    .card__header {
+      font-size: 22px;
+    }
+
+    .card__pic-wrap {
+      margin-top: 10px;
+    }
+
+    .card__pic {
+      max-width: 100%;
+    }
+
+    .card__divider {
+      margin: 10px 0;
+    }
+
+    .card__author,
+    .card__year {
+      font-size: 20px;
+    }
+
+    .card__rating {
+      height: 30px;
+      background-color: rgb(255, 255, 255);
+      border: 1px black solid;
+      border-radius: 10px;
+
+      .card__rating-value {
+        height: 100%;
+        background-color: rgb(197, 240, 133);
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

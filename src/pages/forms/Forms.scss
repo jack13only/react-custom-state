@@ -1,0 +1,188 @@
+.form-wrapper {
+  position: relative;
+
+  .form {
+    margin: 10px auto;
+    width: 600px;
+    border-radius: 10px;
+    padding: 15px;
+    background-image: url('../../images/w3card/w3.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-shadow: 1px 1px 1px rgb(255, 255, 255);
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;         
+    -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;              
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;    
+
+    .form__nickname,
+    .form__date,
+    .form__race,
+    .form__fog,
+    .form__rules,
+    .form__file,
+    .form__control {
+      margin: 10px;
+      display: grid;
+      gap: 5px;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: 30px 16px;
+
+      .form__label-tittle {
+        font-size: 18px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+      }
+
+      .form__error {
+        text-align: right;
+        color: rgb(255, 0, 0);
+        margin-right: 10px;
+        grid-area: 2 / 1 / 3 / 3;
+        font-size: 16px;
+      }
+
+      .form__fog-label-wrapper {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+      }
+
+      .form__fog-label {
+        display: block;
+        width: 50px;
+        height: 30px;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .form__rules-agree {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        gap: 10px;
+
+        .form__rules-agree2 {
+          text-shadow: 1px 1px 1px rgb(255, 255, 255);
+          font-size: 16px;
+        }
+      }
+
+      .form__file-input {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+
+        .form__file-input2 {
+          font-size: 16px;
+          text-shadow: 1px 1px 1px rgb(255, 255, 255);
+        }
+      }
+    }
+
+    .form__nickname-input,
+    .form__date-input,
+    .form__select-input,
+    .form__fog-label-wrapper {
+      width: 100%;
+      padding: 0 10px;
+    }
+
+    #w3fog-yes:checked ~ .yes-fog,
+    #w3fog-no:checked ~ .no-fog{
+      background-color: rgb(193, 255, 180);
+      font-weight: 700;
+      border: 2px solid rgb(0, 0, 0);
+    }
+
+    .form__fog-radio {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+    }
+
+    .form__fog-label-wrapper {
+      display: flex;
+      gap: 10px;
+    }  
+
+    .form__control {
+      margin-top: 35px;
+      grid-template-rows: 30px;
+      gap: 50px;
+
+      .form__submit {
+        background-color: rgb(172, 255, 139);
+        border: 2px solid rgb(55, 194, 0);
+        transition: 0.3s linear;
+        font-weight: 700;
+
+        &:hover {
+          border: 2px solid rgb(25, 88, 0);
+        }
+
+        &:disabled {
+          background-color: rgb(233, 255, 224);
+          border: 2px solid rgb(200, 255, 179);
+        }
+      }
+
+      .form__reset {
+        background-color: rgb(255, 234, 139);
+        border: 2px solid rgb(194, 61, 0);
+        transition: 0.3s linear;
+        font-weight: 700;
+
+        &:hover {
+          border: 2px solid rgb(77, 18, 0)
+        }
+      }
+    }
+  }
+
+  .success-wrapper {
+    position: absolute;
+    border-radius: 10px;
+    top: 0;
+    left: 50%;
+    margin-left:-300px;
+    width: 600px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    background-image: url('../../images/form/success.png');
+    background-position: center;
+    background-repeat: no-repeat;    
+    -webkit-animation: 1.1s linear success;
+     -moz-animation: 1.1s linear success;
+       -o-animation: 1.1s linear success;
+          animation: 1.1s linear success;
+  }
+}
+
+.w3card-wrapper {
+  width: 800px;
+  padding: 25px 0;
+  margin: 0 auto;
+  display: grid;  
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 250px;
+  gap: 25px;  
+
+  @media (max-width: 1000px) {
+    width: 600px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 675px) {
+    width: 300px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@-webkit-keyframes success { 0% { opacity: 0; } 20% { opacity: 1; } 70% { opacity: 1; } 100% { opacity: 0; } }
+   @-moz-keyframes success { 0% { opacity: 0; } 20% { opacity: 1; } 70% { opacity: 1; } 100% { opacity: 0; } }
+     @-o-keyframes success { 0% { opacity: 0; } 20% { opacity: 1; } 70% { opacity: 1; } 100% { opacity: 0; } }
+        @keyframes success { 0% { opacity: 0; } 20% { opacity: 1; } 70% { opacity: 1; } 100% { opacity: 0; } }

@@ -1,0 +1,43 @@
+.w3card {
+  height: 100%;
+  border-radius: 15px;
+  padding: 10px;
+  -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;         
+  -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;              
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;   
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 20px;
+  
+  .w3card__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+    .w3card__nickname {
+      font-size: 24px;
+      font-weight: 700;
+      flex: 1;      
+    }
+
+    .w3card__picture {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .w3card__divider {
+    margin: 10px 0;
+  }
+
+}

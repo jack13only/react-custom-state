@@ -1,0 +1,31 @@
+.search-params {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60vw;
+  margin: 0 auto;
+  gap: 50px;
+
+  .search-params__label-status,
+  .search-params__label-gender,
+  .search-params__label-species {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    gap: 10px;
+
+    .search-params__select-status,
+    .search-params__select-gender,
+    .search-params__select-species {
+      width: 60%;
+      height: 4vh;
+      background-image: url('../../images/rim/portal.png');
+      background-size: 110%;
+      background-position: center;
+      font-size: 20px;
+      border-radius: 5px;
+    }    
+  }
+}
